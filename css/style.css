@@ -1,0 +1,1075 @@
+/*--------------------------------------------  css general dans tt les pages -------------------------------------------*/
+
+a:hover {
+    color: blue;
+}
+
+a {
+    color: purple;
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*---------------------- header -------------------------*/
+.head {
+    grid-area: head;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "headerSource"
+        "NavSource";
+}
+
+.ballonVolleyBall {
+    grid-area: headerSource;
+    max-width: 1em;
+}
+
+.Nav {
+    grid-area: NavSource;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Nav>* {
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 2em;
+    text-align: center;
+    flex: 3 1 25px;
+    font-size: larger;
+    background-color: #bbbbbb;
+}
+
+/*---------------------- footer -------------------------*/
+.Foot {
+    grid-area: foot;
+    padding: 1em;
+}
+
+
+/*--------------------------------------------  page de index -------------------------------------------*/
+
+.PageIndex {
+    background-color:  #f1f1f1;
+    display: grid;
+    grid-template-areas:
+        "headerIndex"
+        "NavIndex"
+        "MainIndex"
+        "FooterIndex";
+
+}
+
+.PageIndex>* {
+    border-collapse: collapse;
+
+}
+
+/*---------- header ----------*/
+
+.headIndex {
+    grid-area: headerIndex;
+    padding: 1em;
+    text-align: center;
+    background-color: white;
+}
+
+.NavIndex {
+    overflow: hidden;
+    background-color: black;
+}
+
+.NavIndex a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 1em 7.8em;
+    text-decoration: none;
+}
+
+.NavIndex a:hover {
+    background-color: #bbbbbb;
+    color: black;
+}
+
+/*---------- Main ----------*/
+
+.MainIndex {
+    grid-area: MainIndex;
+}
+
+.GaucheIndex {
+    float: left;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.GaucheIndex .boiteIndex {
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 2em;
+    flex: 3 1 25px;
+    background-color: white;
+    margin-bottom: 1em;
+}
+
+.TextIndex1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.ImageCollegeLionel-Groulx {
+    max-width: 100%;
+
+}
+
+.GaucheIndex .boiteIndex2 {
+    padding: 1em;
+    padding-bottom: 2em;
+    border: 2px solid black;
+    border-radius: 2em;
+    flex: 3 1 25px;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+        "SousTitre SousTitre"
+        "textINDEX IMAGEINDEX"
+        "listeINDEX IMAGEINDEX";
+}
+
+.SousTitreIndex2 {
+    grid-area: SousTitre;
+}
+
+.TextIndex2 {
+    grid-area: textINDEX;
+}
+
+.ListeConnaissanceIndex {
+    grid-area: listeINDEX;
+}
+
+.ImageLangueProg {
+    grid-area: IMAGEINDEX;
+    max-width: 100%;
+    width: 15em;
+    height: 15em;
+    border-radius: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+}
+
+.DroiteIndex {
+    float: right;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+.boiteIndex3 {
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 2em;
+    flex: 3 1 25px;
+    background-color: white;
+    margin-bottom: 5em;
+}
+
+.TextIndex {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.TextIndex li {
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-bottom: 1em;
+}
+
+/*---------------------- footer -------------------------*/
+.FootINDEX {
+    grid-area: FooterIndex;
+    padding: 1em;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 2em;
+}
+
+/*---------------------- footer -------------------------*/
+
+@media screen and (max-width: 1350px){
+    .GaucheIndex, .DroiteIndex{
+        width: 100%;
+    }
+    .DroiteIndex{
+        margin-left: 1em;
+    }
+
+}
+
+/*--------------------------------------------  page d horarire -------------------------------------------*/
+
+.PageHoraire {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: linear-gradient(black, gray);
+}
+
+.PageHoraire>* {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+/*---------- header ----------*/
+
+
+.PageHoraire .Nav>* {
+    background-color: white;
+}
+
+.Nav a {
+    color: black;
+}
+
+.Nav a:hover {
+    color: blue;
+}
+
+/*---------- Main ----------*/
+
+
+.MainHoraire {
+    grid-area: main;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 0.001fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "heure date date date date date"
+        "heure cour1 cour1 cour1 cour1 cour1 "
+        "heure cour2 cour2 cour2 cour2 cour2 "
+        "heure cour3 cour3 cour3 cour3 cour3 "
+        "heure cour4 cour4 cour4 cour4 cour4 "
+        "heure cour5 cour5 cour5 cour5 cour5 "
+        "heure cour6 cour6 cour6 cour6 cour6 "
+        "heure cour7 cour7 cour7 cour7 cour7 "
+        "heure cour8 cour8 cour8 cour8 cour8 "
+        "heure cour9 cour9 cour9 cour9 cour9 "
+        "heure cour10 cour10 cour10 cour10 cour10 "
+        "heure cour11 cour11 cour11 cour11 cour11 "
+        "text text text text text text"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+
+}
+
+
+.dateHoraire {
+    grid-area: date;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.JourHorarire {
+    padding: 1em;
+    border: 1px solid black;
+    flex: 3 1 25px;
+}
+
+
+.heureHoraire {
+    grid-area: heure;
+    padding: 1em;
+    border: 1px solid black;
+    flex: 1 1 25px;
+}
+
+
+.MainHoraire .Heure1 {
+    grid-area: cour1;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure2 {
+    grid-area: cour2;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure3 {
+    grid-area: cour3;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure4 {
+    grid-area: cour4;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure5 {
+    grid-area: cour5;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure6 {
+    grid-area: cour6;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure7 {
+    grid-area: cour7;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure8 {
+    grid-area: cour8;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure9 {
+    grid-area: cour9;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure10 {
+    grid-area: cour10;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.MainHoraire .Heure11 {
+    grid-area: cour11;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.item {
+    padding: 1em;
+    border: 1px solid black;
+    text-align: center;
+    flex: 3 1 25px;
+}
+
+
+
+/*--flex pour prog--*/
+.itemProg {
+    padding: 1em;
+    border: 1px solid black;
+
+    flex: 3 1 25px;
+    background-color: lightcoral;
+}
+
+/*--flex pour Math--*/
+.itemMath {
+    padding: 1em;
+    border: 1px solid black;
+
+    flex: 3 1 25px;
+    background-color: skyblue;
+}
+
+/*--Explo--*/
+.itemExplo {
+    padding: 1em;
+    border: 1px solid black;
+
+    flex: 3 1 25px;
+    background-color: lightgreen;
+}
+
+/*--Web--*/
+.itemWeb {
+    padding: 1em;
+    border: 1px solid black;
+
+    flex: 3 1 25px;
+    background-color: lightpink;
+}
+
+/*--general pour les noms*/
+.NomDuCour {
+    font: bolder;
+    font-size: large;
+    margin: 0%;
+}
+
+.codeCour {
+    font-style: italic;
+    font: x-small;
+    margin: 0%;
+}
+
+.local {
+    font: x-small;
+    margin: 0%;
+}
+
+.NonProf {
+    font: x-small;
+    margin: 0%;
+}
+
+.DeuxCoursHoraire {
+    grid-area: text;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    background-color: white;
+}
+
+.TextHoraire {
+    padding: 1em;
+    border: 1px solid black;
+    flex: 3 1 25px;
+    font-size: large;
+}
+
+.imageDEHoraire{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+/*--------------------------------------------  page de Profession -------------------------------------------*/
+
+.PageProfession {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: linear-gradient(black, gray);
+}
+
+.PageProfession>* {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+/*---------- Main ----------*/
+
+.MainProfession {
+    grid-area: main;
+    padding: 1em;
+
+    font-size: x-large;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "discrip1"
+        "discrip2"
+        "discrip3"
+        "discrip4"
+        "discrip5"
+}
+
+.Profession1 {
+    grid-area: discrip1;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Profession2 {
+    grid-area: discrip2;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Profession3 {
+    grid-area: discrip3;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Profession4 {
+    grid-area: discrip4;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Profession5 {
+    grid-area: discrip5;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nomJob {
+    grid-area: nom;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    flex: 0.5 1 25px;
+    text-align: center;
+}
+
+.Job {
+    grid-area: discrip;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    flex: 3 1 25px;
+}
+
+.Profession1>* {
+    background-color: white;
+}
+
+.Profession3>* {
+    background-color: white;
+}
+
+.Profession5>* {
+    background-color: white;
+}
+
+.Profession2>* {
+    background-color: #bbbbbb;
+}
+
+.Profession4>* {
+    background-color: #bbbbbb;
+}
+
+@media screen and (max-width: 1350px){
+   .head , .lienHead{
+    max-width: 100%;
+   }
+
+}
+
+
+
+/*--------------------------------------------  page de Sujet -------------------------------------------*/
+
+.PageSujet {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: linear-gradient(black, gray);
+}
+
+.PageSujet>* {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+/*---------- Main ----------*/
+
+.MainSujet {
+    grid-area: main;
+    padding: 1em;
+
+}
+
+.PhotoSujet {
+    display: flex;
+    flex-direction: row;
+    background-color: #bbbbbb;
+}
+
+.PhotoDeSujet {
+    padding: 1em;
+    flex: 3 1 10px;
+
+    font-size: large;
+    align-items: center;
+}
+
+.PhotoDeSujet2 {
+    padding: 1em;
+    flex: 3 1 10px;
+    font-size: large;
+    align-self: flex-end;
+}
+
+.PhotoDeSujet img {
+    max-width: 25em;
+
+}
+
+.PhotoDeSujet2 img {
+    max-width: 25em;
+    align-self: flex-end;
+}
+
+@media screen and (max-width:1350px) {
+    .PhotoDeSujet2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #Image1DESUJET{
+        display: none;
+    }
+    .MainSujet .PhotoSujet{
+        display: inline-block
+    }
+    
+}
+
+/*--------------------------------------------  page de Galerie -------------------------------------------*/
+
+.PageGalerie {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: linear-gradient(black, gray);
+}
+
+.PageGalerie>* {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+/*---------- header ----------*/
+
+.headGalerie {
+    grid-area: head;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+.NavGalerie {
+    text-align: left;
+}
+
+
+/*---------- Main ----------*/
+
+.MainGalerie {
+    grid-area: main;
+    padding: 1em;
+
+}
+
+.MainGalerie .ttimageGalerie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imageGalerie a img {
+    max-width: 25em;
+    border-radius: 2em;
+}
+
+.imageGalerie .imageDunJoueur {
+
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: #bbbbbb;
+}
+
+.imageDunJoueur figcaption {
+    text-align: center;
+}
+
+.imageDunJoueur :hover {
+    opacity: 0.75;
+}
+
+/*--------------------------------------------  page de KB2+ -------------------------------------------*/
+
+
+.PageKB2PLUS {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    grid-template-areas:
+        "head head head"
+        "main main main"
+        "foot foot foot"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: linear-gradient(black, gray);
+}
+
+.PageKB2PLUS>* {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+/*---------------------- header -------------------------*/
+/*  les codes suivant sont inspirer de W3schools*/
+.headKB2 {
+    grid-area: head;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "headerSource"
+        "NavSource";
+}
+
+.NavKB2 {
+    grid-area: NavSource;
+    text-align: left;
+    display: flex;
+    border-radius: 1em;
+    flex-direction: row;
+    background-color: #bbbbbb;
+
+}
+
+.NavKB2>* {
+    font-size: larger;
+    justify-content: space-between;
+}
+
+.NomBoutonKB2 {
+    background-color: #bbbbbb;
+    color: black;
+    padding: 1.5em 1em;
+    font-size: 1em;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 0.8em;
+}
+
+.dropdownKB2 {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-contentKB2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-contentKB2 a {
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+}
+
+.dropdown-contentKB2 a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdownKB2:hover .dropdown-contentKB2 {
+    display: block;
+}
+
+.dropdownKB2:hover .NomBoutonKB2 {
+    background-color: #dfdddd;
+    border: none;
+}
+
+/*---------- Main ----------*/
+
+.MainKB2PLUS {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.itemKB2 {
+    padding: 1em;
+    flex: 3 1 10px;
+    font-size: large;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1em;
+    background-color: #bbbbbb;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "textKB2 NouveauCSS";
+}
+
+.textKB2 {
+    grid-area: textKB2;
+    padding: 1em;
+}
+
+/*------------------ new 1----------------------*/
+
+.dropDown {
+    grid-area: NouveauCSS;
+    position: relative;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: #727272;
+}
+
+.dropDownItem {
+    display: none;
+    background-color: #bbbbbb;
+    padding: 0.5em;
+    z-index: 1;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.dropDown:hover .dropDownItem {
+    display: block;
+}
+
+/*------------------ new 2----------------------*/
+
+.Form {
+    grid-area: NouveauCSS;
+    border-radius: 1em;
+    background-color: #f2f2f2;
+    padding: 1em;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fakeBouton {
+    background-color: rgb(54, 172, 54);
+    text-align: center;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.fakeBouton:hover {
+    background-color: rgb(129, 223, 129);
+}
+
+/*------------------ new 3----------------------*/
+.Z-index {
+    grid-area: NouveauCSS;
+}
+
+.Z-index img {
+    position: absolute;
+    z-index: 1;
+    max-width: 2em;
+}
+
+/*------------------ new 4----------------------*/
+.Shadows {
+    grid-area: NouveauCSS;
+    text-align: center;
+}
+
+.Shadows:hover {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/*------------------ new 5----------------------*/
+.Reflection {
+    grid-area: NouveauCSS;
+    max-width: 4em;
+    float: right;
+    -webkit-box-reflect: right;
+}
+
+/*--------------------------------------------  page de Source -------------------------------------------*/
+
+.PageSource {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    grid-template-areas:
+        "head head head"
+        "main main aside"
+        "foot foot foot"
+    ;
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: linear-gradient(black, gray);
+}
+
+.PageSource>* {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+/*---------- Main ----------*/
+
+.MainSource {
+    grid-area: main;
+    padding: 1em;
+
+}
+
+.MainSource .ttPhotoSource {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imageSource a img {
+    max-width: 20em;
+    border-radius: 2em;
+}
+
+.PhotoSource .imageSource {
+
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: #bbbbbb;
+}
+
+.imageSource figcaption {
+    text-align: center;
+}
+
+.imageSource :hover {
+    opacity: 0.75;
+}
+
+/*---------- aside ----------*/
+.asideImage {
+    grid-area: aside;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.ImageRondSource {
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: #bbbbbb;
+
+}
+
+.ImageRondSource a img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-align: right;
+}
+
+@media screen and (max-width:1500px) {
+    .PageSource {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head"
+            "main"
+            "aside"
+            "foot";
+        align-items: center;
+    }
+}
